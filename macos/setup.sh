@@ -23,12 +23,7 @@ brew install wget
 brew install caffeine
 brew install tig
 brew install shellcheck
-
-echo "Installing oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-mkdir ~/.oh-my-zsh/custom/plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-sed -i s'/robbyrussell/geoffgarside/' ~/.zshrc
+brew install tmux
 
 echo "Installing Spacemacs"
 brew tap homebrew/cask-fonts
