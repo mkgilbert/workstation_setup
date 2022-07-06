@@ -24,7 +24,7 @@ brew install caffeine
 brew install tig
 brew install shellcheck
 brew install tmux
-brew install vagrant
+brew install watson
 
 echo "Installing Spacemacs"
 brew tap homebrew/cask-fonts
