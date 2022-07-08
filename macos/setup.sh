@@ -25,9 +25,19 @@ brew install tig
 brew install shellcheck
 brew install tmux
 brew install watson
+# LXD client (you'll need a Linux VM running to use lxc)
+brew install lxc
 
 echo "Installing Spacemacs"
 brew tap homebrew/cask-fonts
 brew install svn # prereq for font-source-code-pro
 brew install --cask font-source-code-pro
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+echo "Installing Rust"
+xcode-select --install
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+
+echo "Setting up Mac defaults"
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
