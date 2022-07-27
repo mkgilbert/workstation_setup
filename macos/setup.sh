@@ -19,6 +19,7 @@ echo "Installing packages"
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask emacs
+brew install --cask pomatez  # pomodoro timer -- go to preferences to allow this app to open
 brew install wget
 brew install caffeine
 brew install tig
