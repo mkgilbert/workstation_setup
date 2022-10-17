@@ -11,7 +11,7 @@ fi
 sleep 1
 
 echo "Adding brew to path"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/mgilbert/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
@@ -19,6 +19,7 @@ echo "Installing packages"
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask emacs
+brew install --cask hammerspoon
 brew install --cask pomatez  # pomodoro timer -- go to preferences to allow this app to open
 brew install wget
 brew install caffeine
@@ -28,6 +29,15 @@ brew install tmux
 brew install watson
 # LXD client (you'll need a Linux VM running to use lxc)
 brew install lxc
+
+echo "Installing Hammerspoon Clipboard Tool Spoon"
+tmp_dir=$(mktemp -d)
+pushd $tmp_dir
+wget https://github.com/Hammerspoon/Spoons/raw/master/Spoons/ClipboardTool.spoon.zip
+unzip ClipboardTool.spoon.zip
+cp -r ClipboardTool.spoon $HOME/.hammerspoon/Spoons/
+popd
+rm -rf $tmp_dir
 
 echo "Installing Spacemacs"
 brew tap homebrew/cask-fonts
