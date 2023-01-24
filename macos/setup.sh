@@ -29,6 +29,9 @@ brew install tmux
 brew install watson
 # LXD client (you'll need a Linux VM running to use lxc)
 brew install lxc
+# The next 2 are for creating gifs from .mov files
+brew install ffmpeg
+brew install gifsicle
 
 echo "Installing Hammerspoon Clipboard Tool Spoon"
 tmp_dir=$(mktemp -d)
