@@ -32,6 +32,7 @@ brew install lxc
 # The next 2 are for creating gifs from .mov files
 brew install ffmpeg
 brew install gifsicle
+brew install mosh
 
 echo "Installing Hammerspoon Clipboard Tool Spoon"
 tmp_dir=$(mktemp -d)
